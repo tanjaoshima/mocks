@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM – People</title>
+<style>
+    :root{
+        --primary:#2867B2;
+        --bg:#fdfdfd;
+        --border:#e0e0e0;
+        --text:#333;
+        --muted:#666;
+    }
+    body{
+        font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+        margin:0;
+        background:var(--bg);
+        color:var(--text);
+    }
+    h1{font-size:1.25rem;margin:1rem 0;text-align:center;}
+    .filters{
+        display:flex;
+        flex-wrap:wrap;
+        gap:.5rem;
+        padding:0 1rem 1rem;
+        justify-content:center;
+    }
+    .filters button{
+        padding:.4rem .8rem;
+        border:1px solid var(--border);
+        background:#fff;
+        border-radius:4px;
+        font-size:.875rem;
+        cursor:pointer;
+    }
+    .filters button:hover{
+        background:#fafafa;
+    }
+    .table-container{
+        overflow-x:auto;
+        padding:0 1rem;
+    }
+    table{
+        width:100%;
+        border-collapse:collapse;
+        min-width:850px;
+    }
+    th,td{
+        padding:.35rem .5rem;
+        border-bottom:1px solid var(--border);
+        font-size:.81rem;
+        line-height:1.2;
+        text-align:left;
+        white-space:nowrap;
+    }
+    th{
+        background:#fafafa;
+        position:sticky;
+        top:0;
+        z-index:1;
+    }
+    tr:hover{
+        background:#f5f7ff;
+    }
+    .linkedin-icon{
+        display:inline-block;
+        vertical-align:middle;
+        width:16px;
+        height:16px;
+        fill:var(--primary);
+    }
+    .pagination{
+        display:flex;
+        gap:.25rem;
+        justify-content:center;
+        padding:1rem;
+        flex-wrap:wrap;
+    }
+    .pagination a{
+        padding:.35rem .6rem;
+        border:1px solid var(--border);
+        border-radius:3px;
+        text-decoration:none;
+        color:var(--muted);
+        font-size:.875rem;
+    }
+    .pagination a.active{
+        background:var(--primary);
+        color:#fff;
+        border-color:var(--primary);
+    }
+    @media(max-width:600px){
+        th,td{font-size:.75rem;padding:.3rem .4rem;}
+        .filters button{font-size:.75rem}
+    }
+</style>
+</head>
+<body>
+<h1>People CRM</h1>
+
+<div class="filters">
+    <button>Gender: Female</button>
+    <button>Gender: Male</button>
+    <button>Location: SP/BR</button>
+    <button>Location: RJ/BR</button>
+    <button>Job: Product</button>
+    <button>Job: Engineering</button>
+    <button>Company: Startup Early</button>
+    <button>Company: VC</button>
+</div>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+    <th>#</th>
+    <th>Full Name</th>
+    <th>Location Code</th>
+    <th>Job Title</th>
+    <th>Company Type</th>
+    <th>Current Hometown</th>
+    <th>LinkedIn</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Maria Silva</td><td>SP/BR</td><td>Product Manager</td><td>startup early</td><td>Rio de Janeiro</td><td><a href="#"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.03-3.039-1.852-3.039-1.853 0-2.135 1.445-2.135 2.94v5.668h-3.555V9h3.414v1.56h.05c.476-.901 1.637-1.851 3.372-1.851 3.605 0 4.272 2.371 4.272 5.454v6.289zM5.337 7.433c-1.144 0-2.072-.928-2.072-2.072 0-1.144.928-2.072 2.072-2.072 1.143 0 2.071.928 2.071 2.072 0 1.144-.928 2.072-2.071 2.072zm1.777 13.019H3.561V9h3.553v11.452z"/></svg></a></td></tr>
+<tr><td>2</td><td>João Pereira</td><td>RJ/BR</td><td>Software Engineer</td><td>startup early</td><td>São Paulo</td><td></td></tr>
+<tr><td>3</td><td>Ana Costa</td><td>NY/US</td><td>Data Analyst</td><td>big tech</td><td>Belo Horizonte</td><td><a href="#"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.03-3.039-1.852-3.039-1.853 0-2.135 1.445-2.135 2.94v5.668h-3.555V9h3.414v1.56h.05c.476-.901 1.637-1.851 3.372-1.851 3.605 0 4.272 2.371 4.272 5.454v6.289zM5.337 7.433c-1.144 0-2.072-.928-2.072-2.072 0-1.144.928-2.072 2.072-2.072 1.143 0 2.071.928 2.071 2.072 0 1.144-.928 2.072-2.071 2.072zm1.777 13.019H3.561V9h3.553v11.452z"/></svg></a></td></tr>
+<tr><td>4</td><td>Carlos Souza</td><td>CA/US</td><td>UX Designer</td><td>big tech</td><td>Recife</td><td></td></tr>
+<tr><td>5</td><td>Fernanda Lima</td><td>RS/BR</td><td>Marketing Lead</td><td>startup large</td><td>Porto Alegre</td><td><a href="#"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.03-3.039-1.852-3.039-1.853 0-2.135 1.445-2.135 2.94v5.668h-3.555V9h3.414v1.56h.05c.476-.901 1.637-1.851 3.372-1.851 3.605 0 4.272 2.371 4.272 5.454v6.289zM5.337 7.433c-1.144 0-2.072-.928-2.072-2.072 0-1.144.928-2.072 2.072-2.072 1.143 0 2.071.928 2.071 2.072 0 1.144-.928 2.072-2.071 2.072zm1.777 13.019H3.561V9h3.553v11.452z"/></svg></a></td></tr>
+<tr><td>6</td><td>Lucas Oliveira</td><td>TX/US</td><td>DevOps Engineer</td><td>VC</td><td>Curitiba</td><td></td></tr>
+<tr><td>7</td><td>Juliana Dias</td><td>MG/BR</td><td>HR Director</td><td>big tech</td><td>Brasília</td><td><a href="#"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.03-3.039-1.852-3.039-1.853 0-2.135 1.445-2.135 2.94v5.668h-3.555V9h3.414v1.56h.05c.476-.901 1.637-1.851 3.372-1.851 3.605 0 4.272 2.371 4.272 5.454v6.289zM5.337 7.433c-1.144 0-2.072-.928-2.072-2.072 0-1.144.928-2.072 2.072-2.072 1.143 0 2.071.928 2.071 2.072 0 1.144-.928 2.072-2.071 2.072zm1.777 13.019H3.561V9h3.553v11.452z"/></svg></a></td></tr>
+<tr><td>8</td><td>Gabriel Ferreira</td><td>NJ/US</td><td>Finance Analyst</td><td>startup early</td><td>Salvador</td><td></td></tr>
+<tr><td>9</td><td>Patrícia Gomes</td><td>SP/BR</td><td>Customer Success</td><td>startup large</td><td>Fortaleza</td><td><a href="#"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.03-3.039-1.852-3.039-1.853 0-2.135 1.445-2.135 2.94v5.668h-3.555V9h3.414v1.56h.05c.476-.901 1.637-1.851 3.372-1.851 3.605 0 4.272 2.371 4.272 5.454v6.289zM5.337 7.433c-1.144 0-2.072-.928-2.072-2.072 0-1.144.928-2.072=" /></svg></a></td></tr>
+<tr><td>10</td><td>Rafael Almeida</td><td>RJ/BR</td><td>Growth Hacker</td><td>startup early</td><td>Manaus</td><td></td></tr>
+<tr><td>11</td><td>Larissa Rocha</td><td>FL/US</td><td>QA Engineer</td><td>big tech</td><td>Florianópolis</td><td><a href="#"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.03-3.039-1.852-3.039-1.853 0-2.135 1.445-2.135 2.94v5.668h-3.555V9h3.414v1.56h.05c.476-.901 1.637-1.851 3.372-1.851 3.605 0 4.272 2.371 4.272 5.454v6.289zM5.337 7.433c-1.144 0-2.072-.928-2.072-2.072 0-1.144.928-2.072 2.072-2.072 1.143 0 2.071.928 2.071 2.072 0 1.144-.928 2.072-2.071 2.072zm1.777 13.019H3.561V9h3.553v11.452z"/></svg></a></td></tr>
+<tr><td>12</td><td>Bruno Ribeiro</td><td>SP/BR</td><td>Backend Developer</td><td>startup early</td><td>Goiânia</td><td></td></tr>
+<tr><td>13</td><td>Isabela Martins</td><td>RJ/BR</td><td>Content Strategist</td><td>VC</td><td>Belém</
